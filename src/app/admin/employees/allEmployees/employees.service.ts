@@ -31,6 +31,7 @@ export class EmployeesService extends UnsubscribeOnDestroyAdapter {
         this.dataChange.next(data["employee"]);
         console.log({count:data['numberEmp']})
         this.numberEmployee=data['numberEmp']
+        //put number to localstorage
         const str = this.numberEmployee.toString();
         localStorage.setItem("number_emp",str);
         console.log({numberEmp:this.numberEmployee})
